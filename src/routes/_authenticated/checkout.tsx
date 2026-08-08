@@ -10,9 +10,9 @@ import { taka } from "@/lib/format";
 export const Route = createFileRoute("/_authenticated/checkout")({
   head: () => ({
     meta: [
-      { title: "Checkout — Diableo" },
-      { name: "description", content: "Confirm your delivery details and place your Diableo order." },
-      { property: "og:title", content: "Checkout — Diableo" },
+      { title: "Checkout — Diablo" },
+      { name: "description", content: "Confirm your delivery details and place your Diablo order." },
+      { property: "og:title", content: "Checkout — Diablo" },
       { property: "og:description", content: "Confirm your delivery details for your order." },
       { name: "robots", content: "noindex" },
     ],
@@ -116,7 +116,7 @@ function Checkout() {
         </form>
 
         <aside className="h-fit border border-border bg-card p-6">
-          <p className="label-caps text-gold">Your bag</p>
+          <p className="label-caps text-gold">Your cart</p>
           <ul className="mt-4 space-y-3 text-sm">
             {items.map((item) => (
               <li key={`${item.slug}-${item.size}`} className="flex justify-between gap-3">

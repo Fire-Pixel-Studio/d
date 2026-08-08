@@ -17,16 +17,16 @@ export const Route = createFileRoute("/shop")({
   }),
   head: () => ({
     meta: [
-      { title: "Shop All Imported Pieces — Diableo" },
+      { title: "Shop All Imported Pieces — Diablo" },
       {
         name: "description",
         content:
-          "Browse every Diableo piece: tees, baggy jeans, jackets, shirts, cargos and accessories. Filter by category and sort by price.",
+          "Browse every Diablo piece: tees, baggy jeans, jackets, shirts, cargos and accessories. Filter by category and sort by price.",
       },
-      { property: "og:title", content: "Shop All Imported Pieces — Diableo" },
+      { property: "og:title", content: "Shop All Imported Pieces — Diablo" },
       {
         property: "og:description",
-        content: "Browse every Diableo piece. Single stock, honest condition notes.",
+        content: "Browse every Diablo piece. Single stock, honest condition notes.",
       },
     ],
   }),

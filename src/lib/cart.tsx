@@ -27,7 +27,7 @@ type CartContextValue = {
   clear: () => void;
 };
 
-const STORAGE_KEY = "diableo-cart";
+const STORAGE_KEY = "diablo-cart";
 const CartContext = createContext<CartContextValue | null>(null);
 
 export function CartProvider({ children }: { children: ReactNode }) {

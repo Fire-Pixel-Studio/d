@@ -6,13 +6,13 @@ import { taka } from "@/lib/format";
 export const Route = createFileRoute("/cart")({
   head: () => ({
     meta: [
-      { title: "Your Bag — Diableo" },
+      { title: "Your Cart — Diablo" },
       {
         name: "description",
-        content: "Review the imported pieces in your Diableo bag before checkout.",
+        content: "Review the imported pieces in your Diablo cart before checkout.",
       },
-      { property: "og:title", content: "Your Bag — Diableo" },
-      { property: "og:description", content: "Review your Diableo bag before checkout." },
+      { property: "og:title", content: "Your Cart — Diablo" },
+      { property: "og:description", content: "Review your Diablo cart before checkout." },
     ],
   }),
   component: CartPage,
@@ -23,11 +23,11 @@ function CartPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
-      <h1 className="text-4xl">Your bag</h1>
+      <h1 className="text-4xl">Your cart</h1>
 
       {items.length === 0 ? (
         <div className="mt-10 border border-border bg-card p-10 text-center">
-          <p className="text-sm text-muted-foreground">Your bag is empty.</p>
+          <p className="text-sm text-muted-foreground">Your cart is empty.</p>
           <Link
             to="/shop"
             className="label-caps mt-6 inline-flex bg-gold px-8 py-3 text-gold-foreground"

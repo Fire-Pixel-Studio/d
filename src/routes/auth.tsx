@@ -2,7 +2,6 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/lovable/index";
 import { useUser } from "@/lib/use-user";
 
 type AuthSearch = { redirect?: string | undefined };
@@ -16,13 +15,13 @@ export const Route = createFileRoute("/auth")({
   }),
   head: () => ({
     meta: [
-      { title: "Login or Register — Diableo" },
+      { title: "Login or Register — Diablo" },
       {
         name: "description",
-        content: "Sign in to your Diableo account to check out and follow your orders.",
+        content: "Sign in to your Diablo account to check out and follow your orders.",
       },
-      { property: "og:title", content: "Login or Register — Diableo" },
-      { property: "og:description", content: "Sign in to your Diableo account." },
+      { property: "og:title", content: "Login or Register — Diablo" },
+      { property: "og:description", content: "Sign in to your Diablo account." },
     ],
   }),
   component: AuthPage,
@@ -74,23 +73,13 @@ function AuthPage() {
     }
   }
 
-  async function google() {
-    const result = await lovable.auth.signInWithOAuth("google", {
-      redirect_uri: window.location.origin,
-    });
-    if (result.error) {
-      toast.error("Google sign-in failed. Try again.");
-      return;
-    }
-  }
-
   return (
     <div className="mx-auto max-w-md px-4 py-16">
       <h1 className="text-4xl">{mode === "login" ? "Login" : "Register"}</h1>
       <p className="mt-2 text-sm text-muted-foreground">
         {mode === "login"
           ? "Sign in to check out and follow your orders."
-          : "Create an account to place orders with Diableo."}
+          : "Create an account to place orders with Diablo."}
       </p>
 
       {sentConfirmation ? (
@@ -151,16 +140,7 @@ function AuthPage() {
         </form>
       )}
 
-      <div className="my-6 flex items-center gap-3 text-xs text-muted-foreground">
-        <span className="h-px flex-1 bg-border" /> or <span className="h-px flex-1 bg-border" />
-      </div>
 
-      <button
-        onClick={google}
-        className="label-caps w-full border border-border py-4 transition-colors hover:border-gold hover:text-gold"
-      >
-        Continue with Google
-      </button>
 
       <button
         onClick={() => {

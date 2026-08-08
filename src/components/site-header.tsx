@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, LogOut, Menu, Search, ShoppingBag, User, X } from "lucide-react";
+import { Instagram, LogOut, Menu, Search, ShoppingCart, User, X } from "lucide-react";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useCart } from "@/lib/cart";
@@ -36,7 +36,7 @@ export function SiteHeader() {
         </button>
 
         <Link to="/" className="mr-2 flex items-baseline gap-1">
-          <span className="font-display text-3xl leading-none tracking-[0.14em]">DIABLEO</span>
+          <span className="font-display text-3xl leading-none tracking-[0.14em]">DIABLO</span>
           <span className="size-1.5 rounded-full bg-gold" />
         </Link>
 
@@ -63,11 +63,11 @@ export function SiteHeader() {
             <Search className="size-5" />
           </Link>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/graudediablo/"
             target="_blank"
             rel="noreferrer"
             className="hidden text-muted-foreground transition-colors hover:text-gold sm:block"
-            aria-label="Diableo on Instagram"
+            aria-label="Diablo on Instagram"
           >
             <Instagram className="size-5" />
           </a>
@@ -93,8 +93,8 @@ export function SiteHeader() {
               Login
             </Link>
           )}
-          <Link to="/cart" className="relative" aria-label="Shopping bag">
-            <ShoppingBag className="size-5" />
+          <Link to="/cart" className="relative" aria-label="Shopping cart">
+            <ShoppingCart className="size-5" />
             {count > 0 && (
               <span className="absolute -right-2 -top-2 flex size-4 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-gold-foreground">
                 {count}

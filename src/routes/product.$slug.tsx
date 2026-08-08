@@ -27,9 +27,9 @@ export const Route = createFileRoute("/product/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Unavailable — Diableo" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Unavailable — Diablo" }, { name: "robots", content: "noindex" }] };
     }
-    const title = `${loaderData.name} — Diableo`;
+    const title = `${loaderData.name} — Diablo`;
     return {
       meta: [
         { title },
@@ -55,7 +55,7 @@ function ProductDetail() {
     .filter((p) => p.category === product.category && p.slug !== product.slug)
     .slice(0, 4);
 
-  function addToBag() {
+  function addToCart() {
     if (product!.sizes.length > 1 && !size) {
       toast.error("Pick a size first");
       return;
@@ -67,7 +67,7 @@ function ProductDetail() {
       image_url: product!.image_url,
       size: size || product!.sizes[0] || "OS",
     });
-    toast.success("Added to your bag");
+    toast.success("Added to your cart");
   }
 
   return (
@@ -128,14 +128,14 @@ function ProductDetail() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <button
-              onClick={addToBag}
+              onClick={addToCart}
               disabled={!product.in_stock}
               className="label-caps bg-gold px-9 py-4 text-gold-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
             >
-              {product.in_stock ? "Add to bag" : "Out of stock"}
+              {product.in_stock ? "Add to cart" : "Out of stock"}
             </button>
             <Link to="/cart" className="label-caps border border-border px-9 py-4">
-              View bag
+              View cart
             </Link>
           </div>
         </div>

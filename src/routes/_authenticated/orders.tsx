@@ -7,9 +7,9 @@ import { taka } from "@/lib/format";
 export const Route = createFileRoute("/_authenticated/orders")({
   head: () => ({
     meta: [
-      { title: "Your Orders — Diableo" },
-      { name: "description", content: "Track the Diableo orders placed from your account." },
-      { property: "og:title", content: "Your Orders — Diableo" },
+      { title: "Your Orders — Diablo" },
+      { name: "description", content: "Track the Diablo orders placed from your account." },
+      { property: "og:title", content: "Your Orders — Diablo" },
       { property: "og:description", content: "Track the orders placed from your account." },
       { name: "robots", content: "noindex" },
     ],

@@ -12,13 +12,13 @@ const productsQuery = queryOptions({
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Diableo — Imported Fashion, One Piece At A Time" },
+      { title: "Diablo — Imported Fashion, One Piece At A Time" },
       {
         name: "description",
         content:
           "Hand-picked imported tees, baggy jeans, jackets and accessories. Every piece is single stock, checked by hand and priced in taka.",
       },
-      { property: "og:title", content: "Diableo — Imported Fashion, One Piece At A Time" },
+      { property: "og:title", content: "Diablo — Imported Fashion, One Piece At A Time" },
       {
         property: "og:description",
         content: "Hand-picked imported streetwear and fashion pieces. Single stock, real photos.",
@@ -44,7 +44,7 @@ function Index() {
         <div className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
           <img
             src={heroImage}
-            alt="Two models wearing imported streetwear from Diableo"
+            alt="Two models wearing imported streetwear from Diablo"
             width={1920}
             height={1088}
             className="size-full object-cover object-right"
